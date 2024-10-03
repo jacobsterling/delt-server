@@ -1,0 +1,36 @@
+[package]
+name = "delt_server"
+version = "0.1.0"
+authors = ["Delt <kciuq@protonmail.com>"]
+edition = "2021"
+
+[dependencies]
+actix = "0.13.0"
+actix-web = "4.0.1"
+actix-web-actors = "4.1.0"
+actix-web-httpauth = "0.8.0"
+actix-http = "3.2.2"
+lazy_static = "1.4.0"
+serde = { version = "1.0.163", features = ["derive"] }
+serde_json = "1.0.96"
+near-jsonrpc-client = "0.5.1"
+near-primitives = "0.16.1"
+near-crypto = "0.16.1"
+near-jsonrpc-primitives = "0.16.1"
+futures = "0.3"
+base64 = "0.21.2"
+rand = "0.8.5"
+uuid = { version = "1.2.2", features = ["v4", "fast-rng", "serde"] }
+delt-d = { path = "../contracts/delt-d" }
+dotenv = "0.15.0"
+bigdecimal = "0.3.1"
+diesel = { version = "2.1.0", features = [
+  "uuid",
+  "r2d2",
+  "postgres",
+  "chrono",
+  "serde_json",
+  "numeric",
+] }
+diesel_migrations = "2.0.0"
+chrono = "0.4.24"
